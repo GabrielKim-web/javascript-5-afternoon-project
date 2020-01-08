@@ -104,13 +104,13 @@ function User(name, age, email, savedPosts) {
   this.name = name;
   this.age = age;
   this.email = email;
-  this.this.savedPosts = this.savedPosts;
+  this.savedPosts = this.savedPosts;
 }
 
 //DO NOT USE ARROW FUNCTION
 User.prototype.addSavedPost = function(id, title, rating) {
   let newObj = {id, title, rating};
-  this.this.savedPosts.push(newObj);
+  this.savedPosts.push(newObj);
 }
 
 ////////// PROBLEM 6 //////////
