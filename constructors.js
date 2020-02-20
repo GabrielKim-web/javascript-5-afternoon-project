@@ -104,7 +104,7 @@ function User(name, age, email, savedPosts) {
   this.name = name;
   this.age = age;
   this.email = email;
-  this.savedPosts = this.savedPosts;
+  this.savedPosts = savedPosts;
 }
 
 //DO NOT USE ARROW FUNCTION
@@ -133,9 +133,7 @@ User.prototype.removeSavedPost = function(num) {
 
 // Code here
 User.prototype.changePostRating = function(num1, num2) {
-  let editThis = this.savedPosts.findIndex(element => {
-    element.id === num1
-  })
+  let editThis = this.savedPosts.findIndex(element => element.id === num1)
   this.savedPosts[editThis].rating = num2
   let newValue = this.savedPosts[editThis].rating;
   return newValue;
